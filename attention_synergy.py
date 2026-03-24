@@ -204,7 +204,7 @@ def plot_case_study_combined(syn_result, non_result, n_layers, save_path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Run XAI analysis on trained transformer model.")
+    parser = argparse.ArgumentParser(description="Run analysis on trained transformer model.")
     parser.add_argument("--model-path", required=True, help="Path to trained .model file")
     parser.add_argument("--data-root", default="data")
     parser.add_argument("--datafile", default="new_labels_0_10")
@@ -242,10 +242,10 @@ def main():
     print(f"Transformer: {n_layers} layers, {n_heads} heads")
 
     print("[2/4] Plotting main figure...")
-    plot_main_figure(results, n_layers, n_heads, os.path.join(args.output_dir, "Fig_XAI_Attention_Main.png"))
+    plot_main_figure(results, n_layers, n_heads, os.path.join(args.output_dir, "Fig_Attention_Main.png"))
 
     print("[3/4] Plotting per-head figure...")
-    plot_per_head(results, n_layers, n_heads, os.path.join(args.output_dir, "Fig_XAI_PerHead.png"))
+    plot_per_head(results, n_layers, n_heads, os.path.join(args.output_dir, "Fig_PerHead.png"))
 
     print("[4/4] Plotting case-study figure...")
     syn_sorted = sorted([(idx, r) for idx, r in enumerate(results) if r["label"] == 1], key=lambda x: x[1]["pred_score"], reverse=True)
@@ -257,7 +257,7 @@ def main():
             best_syn,
             best_non,
             n_layers,
-            os.path.join(args.output_dir, "Fig_XAI_CaseStudy_Combined.png"),
+            os.path.join(args.output_dir, "Fig_CaseStudy_Combined.png"),
         )
     else:
         print("Not enough samples for case study.")

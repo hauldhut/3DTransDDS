@@ -26,7 +26,7 @@ python create_data.py --datafile new_labels_0_10 --cellfile data/cell_features.c
 python main.py --datafile new_labels_0_10 --data-root data --result-dir data/result --epochs 200 --lr 0.0002
 ```
 
-3) Run attention plots (example: fold 0)
+3) Run attention plots
 ```bash
 python attention_synergy.py --model-path "data/result/GCNPointNet_Gate_Transformer0--model_new_labels_0_10.model" --data-root data --datafile new_labels_0_10 --fold 0 --seed 0 --batch-size 128 --output-dir data/result
 ```
@@ -35,8 +35,8 @@ python attention_synergy.py --model-path "data/result/GCNPointNet_Gate_Transform
 
 - Model checkpoints: `data/result/*.model`
 - Metrics: `data/result/*AUCs*.txt`
-- XAI figures:
-  - `Fig_XAI_Attention_Main.png`
-  - `Fig_XAI_PerHead.png`
-  - `Fig_XAI_CaseStudy_Combined.png`
+- Figures:
+  - `Fig_Attention_Main.png`
+  - `Fig_PerHead.png`
+  - `Fig_CaseStudy_Combined.png`
 
