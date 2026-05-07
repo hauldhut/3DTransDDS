@@ -1,5 +1,6 @@
 # 3DTransDDS: A Multimodal Framework for Drug Synergy Prediction via Gated Fusion of 2D-3D Drug Representations and Transformer-Based Interaction Modeling
- https://github.com/hauldhut/3DTransDDS/blob/master/Figure1.png
+ ![3DTransDDS](https://github.com/hauldhut/3DTransDDS/blob/master/Figure1.png)
+ 
 
 ## Project Layout
 
