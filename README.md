@@ -1,4 +1,5 @@
-# 3DTransDDS: Fusing 2D and 3D Coordinates with Attention for Drug Synergy Prediction 
+# 3DTransDDS: A Multimodal Framework for Drug Synergy Prediction via Gated Fusion of 2D-3D Drug Representations and Transformer-Based Interaction Modeling
+ 
 
 ## Project Layout
 
